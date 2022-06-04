@@ -1,0 +1,486 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+*, *::before, *::after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.pay_body {
+  position: relative;
+}
+@media (max-width: 767px) {
+  .pay_body {
+    background-image: url("https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/53d3c0b0e4d2885789ac1fcb666e427365a39207/chatTalker_images/banner_sm.svg"), url("https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/53d3c0b0e4d2885789ac1fcb666e427365a39207/chatTalker_images/ball03.svg");
+    background-repeat: no-repeat;
+    background-position: top 73px left, top 1300px left -80px;
+    position: absolute;
+    width: 100%;
+    height: 495px;
+    z-index: -1;
+  }
+}
+.pay_body .RWD_gray {
+  display: none;
+}
+@media (max-width: 767px) {
+  .pay_body .RWD_gray {
+    background-color: #F7F9FD;
+    position: absolute;
+    width: 100%;
+    height: 495px;
+    border-radius: 0 0 0 300px;
+    background-position: right top;
+    z-index: -3;
+  }
+}
+.pay_body .top_btn {
+  display: block;
+  position: fixed;
+  text-align: center;
+  text-decoration: none;
+  background-color: #56C4C5;
+  color: white;
+  right: 20px;
+  bottom: 20px;
+  padding: 18px 10px;
+  border-radius: 50%;
+}
+.pay_body .top_btn:hover {
+  background-color: blue;
+}
+
+.bg_img {
+  background-image: url("https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/53d3c0b0e4d2885789ac1fcb666e427365a39207/chatTalker_images/banner.svg");
+  background-repeat: no-repeat;
+  background-position: right top;
+  position: absolute;
+  width: 100%;
+  height: 559px;
+  z-index: -1;
+}
+@media (max-width: 767px) {
+  .bg_img {
+    display: none;
+  }
+}
+
+.bg_gray {
+  background-color: #F7F9FD;
+  position: absolute;
+  width: 100%;
+  height: 470px;
+  border-radius: 0 0 0 300px;
+  background-position: right top;
+  z-index: -3;
+}
+@media (max-width: 767px) {
+  .bg_gray {
+    display: none;
+  }
+}
+
+.RWD_logo {
+  display: none;
+}
+
+.pay_wrap {
+  max-width: 1088px;
+  margin: 0 auto;
+  padding: 0px 20px;
+  height: auto;
+}
+@media (max-width: 767px) {
+  .pay_wrap {
+    max-width: 375px;
+  }
+}
+.pay_wrap .logo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding-top: 24px;
+}
+.pay_wrap .logo .logo_img {
+  height: 40px;
+}
+.pay_wrap .logo .btn_price {
+  text-decoration: none;
+  text-align: center;
+  color: white;
+  background-color: #FF5D50;
+  border-radius: 22px;
+  padding: 0.8% 0.8% 0.1%;
+  font-size: larger;
+}
+.pay_wrap .logo .btn_price:hover {
+  background-color: blue;
+}
+.pay_wrap .pay_banner {
+  margin-top: 116px;
+}
+.pay_wrap .pay_banner h1 {
+  text-align: left;
+  font-style: Noto Sans TC;
+  font-size: 48px;
+  font-weight: bolder;
+  color: #221E1F;
+  margin-bottom: 16px;
+}
+.pay_wrap .pay_banner p {
+  text-align: left;
+  font-style: Noto Sans TC;
+  font-size: 16px;
+  font-weight: bold;
+  color: #221E1F;
+}
+.pay_wrap .pay_customer h2 {
+  margin: 0 auto;
+  margin-top: 280px;
+  text-align: center;
+  font-size: 32px;
+  font-weight: bolder;
+}
+@media (max-width: 767px) {
+  .pay_wrap .pay_customer h2 {
+    margin-top: 421px;
+  }
+}
+.pay_wrap .pay_customer .customer_amount {
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  max-width: 736px;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin-top: 48px;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  text-align: center;
+  margin-top: 48px;
+}
+.pay_wrap .pay_customer .customer_amount .customer_amount_button {
+  margin-bottom: 5px;
+}
+.pay_wrap .pay_customer .customer_amount .customer_amount_button a {
+  display: block;
+  text-decoration: none;
+  text-align: center;
+  background-color: white;
+  border: 1px solid #56C4C5;
+  color: #56C4C5;
+  font-size: 18px;
+  padding: 12px 32px;
+  border-radius: 22px;
+}
+.pay_wrap .pay_customer .customer_amount .customer_amount_button a:hover {
+  background-color: #56C4C5;
+  color: white;
+}
+.pay_wrap .pay_customer .customer_plan {
+  margin-top: 54px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  max-width: 909px;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin: 0 auto;
+  margin-top: 54px;
+}
+.pay_wrap .pay_customer .customer_plan .plan_detail {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 48.8%;
+  text-align: center;
+  border: #ffffff;
+  -webkit-box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.0784313725);
+          box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.0784313725);
+  border-radius: 12px;
+  margin-bottom: -100px;
+}
+@media (max-width: 767px) {
+  .pay_wrap .pay_customer .customer_plan .plan_detail {
+    width: 100%;
+    margin-bottom: 30px;
+  }
+}
+.pay_wrap .pay_customer .customer_plan .plan_detail h3 {
+  display: block;
+  font-size: 24px;
+  font-weight: bolder;
+  padding: 20px 0px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.0784313725);
+}
+.pay_wrap .pay_customer .customer_plan .plan_detail .detail_intro {
+  margin: 32px;
+  font-size: 16px;
+  line-height: 25px;
+  font-weight: bold;
+}
+.pay_wrap .pay_customer .customer_plan .plan_detail .plan_pay {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 32px;
+  padding: 0% 7%;
+}
+.pay_wrap .pay_customer .customer_plan .plan_detail .plan_pay li {
+  background-color: #F5F5F5;
+  border-radius: 12px;
+  padding: 24px 6%;
+}
+.pay_wrap .pay_customer .customer_plan .plan_detail .plan_pay li p {
+  margin-bottom: 8px;
+  font-weight: bold;
+}
+.pay_wrap .pay_customer .customer_plan .plan_detail .plan_pay li .user {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: baseline;
+      -ms-flex-align: baseline;
+          align-items: baseline;
+  font-style: Comfortaa;
+}
+.pay_wrap .pay_customer .customer_plan .plan_detail .plan_pay li .user p {
+  color: #56C4C5;
+  font-size: 32px;
+  margin: 0px 8px;
+}
+.pay_wrap .pay_customer .customer_plan .plan_detail .plan_pay li .user span {
+  color: #56C4C5;
+  font-size: 12px;
+}
+.pay_wrap .pay_customer .customer_plan .plan_detail .plan_pay li .charge_month {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: baseline;
+      -ms-flex-align: baseline;
+          align-items: baseline;
+}
+.pay_wrap .pay_customer .customer_plan .plan_detail .plan_pay li .charge_month p {
+  font-size: 32px;
+  margin-right: 8px;
+}
+.pay_wrap .pay_customer .customer_plan .plan_detail .plan_pay li .charge_month span {
+  font-size: 12px;
+}
+.pay_wrap .pay_customer .customer_plan .plan_detail .plan_pay .equal_style {
+  background-color: white;
+}
+.pay_wrap .pay_customer .customer_plan .plan_detail .plan_feature {
+  margin-left: 29px;
+  margin-bottom: 32px;
+}
+.pay_wrap .pay_customer .customer_plan .plan_detail .plan_feature li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 16px;
+}
+.pay_wrap .pay_customer .customer_plan .plan_detail .plan_feature li img {
+  margin-right: 12px;
+}
+.pay_wrap .pay_customer .customer_plan .plan_detail .plan_feature li p {
+  font-size: 16px;
+  font-weight: bold;
+}
+.pay_wrap .pay_customer .customer_plan .plan_detail a {
+  display: block;
+  text-decoration: none;
+  text-align: center;
+  background-color: #56C4C5;
+  margin-left: 140px;
+  margin-bottom: 32px;
+  color: white;
+  font-size: 18px;
+  width: 136px;
+  padding: 15px 0px;
+  border-radius: 22px;
+}
+.pay_wrap .pay_customer .customer_plan .plan_detail a:hover {
+  background-color: white;
+  color: #56C4C5;
+  border: 1px solid #56C4C5;
+}
+.pay_wrap .pay_customer .question {
+  text-align: center;
+  width: 904px;
+  margin-bottom: 100px;
+}
+@media (max-width: 767px) {
+  .pay_wrap .pay_customer .question {
+    margin-top: -300px;
+  }
+}
+.pay_wrap .pay_customer .question h2 {
+  font-size: 32px;
+  font-weight: bolder;
+  margin-bottom: 48px;
+}
+.pay_wrap .pay_customer .question ul a {
+  text-decoration: none;
+}
+.pay_wrap .pay_customer .question ul a:hover {
+  color: #56C4C5;
+}
+.pay_wrap .pay_customer .question ul a li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 16px 32px;
+  border: #ffffff;
+  -webkit-box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.0784313725);
+          box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.0784313725);
+  border-radius: 12px;
+  margin-bottom: 20px;
+}
+.pay_wrap .pay_customer .question ul a li h3 {
+  font-size: 18px;
+  font-weight: bolder;
+}
+
+.footer {
+  width: 100%;
+  margin: 0 auto;
+  text-align: center;
+  padding: 16px 0px;
+  background-color: #F5F5F5;
+}
+.footer p {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+@media (max-width: 767px) {
+  .RWD_logo {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    padding: 16px 20px;
+    background-color: white;
+    border-bottom: #FFD153 solid 1px;
+    height: 72px;
+  }
+  .RWD_logo img {
+    width: 130px;
+    height: 24px;
+  }
+  .RWD_logo .btn_price {
+    text-decoration: none;
+    text-align: center;
+    color: white;
+    background-color: #FF5D50;
+    border-radius: 22px;
+    padding: 8px 32px;
+    font-size: larger;
+  }
+  .RWD_logo .btn_price:hover {
+    background-color: blue;
+  }
+
+  .pay_wrap {
+    max-width: 767px;
+    margin: 0 auto;
+    padding: 0px 20px;
+    height: auto;
+  }
+  .pay_wrap .logo {
+    display: none;
+  }
+  .pay_wrap .pay_banner {
+    position: relative;
+    margin-top: 48px;
+  }
+  .pay_wrap .pay_banner h1 {
+    text-align: left;
+    font-style: Noto Sans TC;
+    font-size: 32px;
+    font-weight: bolder;
+    color: #221E1F;
+    margin-bottom: 16px;
+  }
+  .pay_wrap .pay_banner p {
+    text-align: left;
+    font-style: Noto Sans TC;
+    font-size: 16px;
+    font-weight: bold;
+    color: #221E1F;
+  }
+}
